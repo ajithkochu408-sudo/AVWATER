@@ -1054,7 +1054,7 @@ footer {
 }
 </style>
 
-<!-- GOOGLE ADS TRACKING (FINAL CLEAN VERSION) -->
+<!-- GOOGLE ADS TRACKING -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18202558704"></script>
 
 <script>
@@ -1064,14 +1064,21 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-18202558704');
 
-function trackCall(){
-if(typeof gtag !== 'undefined'){
-gtag('event','conversion',{
-'send_to':'AW-18202558704/ThB1CPLywrwcEPCB1OdD',
-'value': 1.0,
-'currency': 'INR'
-});
-}
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18202558704/ThB1CPLywrwcEPCB1OdD',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+
+  return false;
 }
 </script>
 
@@ -1159,7 +1166,7 @@ gtag('event','conversion',{
     </div>
   </div>
   <div class="header-cta">
-    <a href="tel:8606322237" class="btn-call-header" onclick="gtag && gtag('event','call',{event_category:'header'})">
+    <a href="tel:8606322237" class="btn-call-header" onclick="return gtag_report_conversion('tel:8606322237');">
       📞 Call Now
     </a>
   </div>
@@ -1176,7 +1183,7 @@ gtag('event','conversion',{
     <h1>PURE & SAFE DRINKING WATER<br><span>DELIVERY IN TRIVANDRUM</span></h1>
     <p class="hero-malayalam">20L Water Can Delivery for Homes, Apartments, Offices, Hospitals & Events Across Trivandrum </p>
     <div class="hero-buttons">
-      <a href="tel:8606322237" class="btn-primary" onclick="gtag && gtag('event','call',{event_category:'hero'})">
+      <a href="tel:8606322237" class="btn-primary" onclick="return gtag_report_conversion('tel:8606322237');">
         📞 Call Now: 8606322237
       </a>
       <a href="https://wa.me/918606322238?text=Hi%20A%26V!%20I%20want%20to%20order%20water%20can%20delivery." class="btn-secondary" target="_blank">
@@ -1260,7 +1267,7 @@ gtag('event','conversion',{
           <span class="product-tag">Sealed</span>
           <span class="product-tag">Tamper-proof</span>
         </div>
-        <a href="tel:8606322237" class="btn-order">📞 Order Now</a>
+        <a href="tel:8606322237" class="btn-order" onclick="return gtag_report_conversion('tel:8606322237');">📞 Order Now</a>
       </div>
       <div class="product-card">
         <span class="product-icon">🍶</span>
@@ -1271,7 +1278,7 @@ gtag('event','conversion',{
           <span class="product-tag">Sealed</span>
           <span class="product-tag">Affordable</span>
         </div>
-        <a href="tel:8606322237" class="btn-order">📞 Order Now</a>
+        <a href="tel:8606322237" class="btn-order" onclick="return gtag_report_conversion('tel:8606322237');">📞 Order Now</a>
       </div>
       <div class="product-card">
         <span class="product-icon">🥤</span>
@@ -1282,7 +1289,7 @@ gtag('event','conversion',{
           <span class="product-tag">Pure</span>
           <span class="product-tag">Convenient</span>
         </div>
-        <a href="tel:8606322237" class="btn-order">📞 Order Now</a>
+        <a href="tel:8606322237" class="btn-order" onclick="return gtag_report_conversion('tel:8606322237');">📞 Order Now</a>
       </div>
     </div>
   </div>
@@ -1313,7 +1320,7 @@ gtag('event','conversion',{
       <span class="area-badge">Mannanthala</span>
       <span class="area-badge">Vattiyoorkavu</span>
     </div>
-    <p class="areas-note">Don't see your area? <a href="tel:8606322237">Call us — we'll check!</a> 📞</p>
+    <p class="areas-note">Don't see your area? <a href="tel:8606322237" onclick="return gtag_report_conversion('tel:8606322237');">Call us — we'll check!</a> 📞</p>
   </div>
 </section>
 
@@ -1549,7 +1556,7 @@ referrerpolicy="no-referrer-when-downgrade">
     <h2 class="section-title">Order Pure Water Today!</h2>
     <p class="section-sub">Trivandrum's most trusted water delivery service is just one call away!</p>
     <div class="contact-buttons">
-      <a href="tel:8606322237" class="btn-contact-call" onclick="gtag && gtag('event','call',{event_category:'contact'})">
+      <a href="tel:8606322237" class="btn-contact-call" onclick="return gtag_report_conversion('tel:8606322237');">
         📞 Call: 8606322237
       </a>
       <a href="https://wa.me/918606322238?text=Hi%20A%26V!%20I%20want%20to%20order%20water%20can%20delivery." class="btn-contact-wa" target="_blank">
@@ -1571,7 +1578,7 @@ referrerpolicy="no-referrer-when-downgrade">
   <div class="footer-content">
     <div class="footer-logo">💧 A&V Marketing Agency</div>
     <div class="footer-links">
-      <a href="tel:8606322237">📞 8606322237</a>
+      <a href="tel:8606322237" onclick="return gtag_report_conversion('tel:8606322237');">📞 8606322237</a>
       <a href="tel:8606322238">📞 8606322238</a>
       <a href="https://wa.me/918606322238" target="_blank">💬 WhatsApp</a>
       <a href="https://g.page/r/CeW0MmZQBa-_EBM/review" target="_blank">⭐ Reviews</a>
@@ -1594,7 +1601,7 @@ referrerpolicy="no-referrer-when-downgrade">
     💬
     <span class="float-label">WhatsApp Order</span>
   </a>
-  <a href="tel:8606322237" class="float-btn float-call" style="position:relative;" onclick="gtag && gtag('event','call',{event_category:'floating'})">
+  <a href="tel:8606322237" class="float-btn float-call" style="position:relative;" onclick="return gtag_report_conversion('tel:8606322237');">
     📞
     <span class="float-label">Call Now</span>
   </a>
