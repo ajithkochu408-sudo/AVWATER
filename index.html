@@ -39,12 +39,7 @@
     "postalCode": "695584",
     "addressCountry": "IN"
   },
-  "openingHours": ["Mo-Sa 08:00-19:00", "Su 09:00-13:00"],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "10"
-  }
+  "openingHours": ["Mo-Sa 08:00-19:00", "Su 09:00-13:00"]
 }
 </script>
 
@@ -1178,7 +1173,7 @@ function gtag_report_conversion(url) {
   <div class="hero-content">
     <div class="hero-badge">
       <span class="stars">⭐⭐⭐⭐⭐</span>
-      5.0 Rating · 10 Google Reviews · Trivandrum's Trusted Choice
+      <span data-gr="rating">4.9</span> Rating · <span data-gr="count">59+</span> Google Reviews · Trivandrum's Trusted Choice
     </div>
     <h1>PURE & SAFE DRINKING WATER<br><span>DELIVERY IN TRIVANDRUM</span></h1>
     <p class="hero-malayalam">20L Water Can Delivery for Homes, Apartments, Offices, Hospitals & Events Across Trivandrum </p>
@@ -1205,7 +1200,7 @@ function gtag_report_conversion(url) {
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;">
       <div style="background:#f8fbff;border:2px solid #e3f2fd;border-radius:18px;padding:18px;text-align:center;font-weight:700;color:#0D47A1;">🛡️ FSSAI Registered<br><span style="font-size:12px;color:#546e7a;font-weight:500;">21325131001074</span></div>
       <div style="background:#f8fbff;border:2px solid #e3f2fd;border-radius:18px;padding:18px;text-align:center;font-weight:700;color:#0D47A1;">📋 GST Registered<br><span style="font-size:12px;color:#546e7a;font-weight:500;">32BMFPA1377Q1ZY</span></div>
-      <div style="background:#f8fbff;border:2px solid #e3f2fd;border-radius:18px;padding:18px;text-align:center;font-weight:700;color:#0D47A1;">⭐ 5.0 Google Rating<br><span style="font-size:12px;color:#546e7a;font-weight:500;">10 Reviews</span></div>
+      <div style="background:#f8fbff;border:2px solid #e3f2fd;border-radius:18px;padding:18px;text-align:center;font-weight:700;color:#0D47A1;">⭐ <span data-gr="rating">4.9</span> Google Rating<br><span style="font-size:12px;color:#546e7a;font-weight:500;"><span data-gr="count">59+</span> Reviews</span></div>
       <div style="background:#f8fbff;border:2px solid #e3f2fd;border-radius:18px;padding:18px;text-align:center;font-weight:700;color:#0D47A1;">🚚 Same-Day Delivery<br><span style="font-size:12px;color:#546e7a;font-weight:500;">Homes & Offices</span></div>
     </div>
   </div>
@@ -1219,8 +1214,8 @@ function gtag_report_conversion(url) {
     <div class="features-grid">
       <div class="feature-card">
         <span class="feature-icon">⭐</span>
-        <h3>5 Star Google Rated</h3>
-        <p>10 verified Google reviews from happy customers across Trivandrum. Our quality speaks for itself!</p>
+        <h3><span data-gr="rating">4.9</span> Star Google Rated</h3>
+        <p><span data-gr="count">59+</span> Google reviews from happy customers across Trivandrum. Our quality speaks for itself!</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🛡️</span>
@@ -1329,11 +1324,11 @@ function gtag_report_conversion(url) {
   <div class="container">
     <h2 class="section-title">What Our Customers Say</h2>
     <div class="rating-display">
-      <div class="big-rating">5.0</div>
+      <div class="big-rating" data-gr="rating">4.9</div>
       <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-      <div class="rating-count">Based on 10 Google Reviews</div>
+      <div class="rating-count">Based on <span data-gr="count">59+</span> Google Reviews</div>
     </div>
-    <div class="reviews-grid">
+    <div class="reviews-grid" id="gr-list">
       <div class="review-card">
         <div class="review-stars">⭐⭐⭐⭐⭐</div>
         <p class="review-text">"Very reliable water delivery service. Always on time and water quality is excellent. Highly recommended!"</p>
@@ -1374,6 +1369,9 @@ function gtag_report_conversion(url) {
     <div style="text-align:center; margin-top:32px;">
       <a href="https://g.page/r/CeW0MmZQBa-_EBM/review" target="_blank" class="btn-order">
         ⭐ Leave Your Review
+      </a>
+      <a id="gr-all" href="https://share.google/6zFbzdWh9ziQtrudq" target="_blank" rel="noopener" class="btn-order" style="margin-left:8px;">
+        📖 Read All Google Reviews
       </a>
     </div>
   </div>
@@ -1658,5 +1656,6 @@ document.querySelectorAll('.steps-grid .step-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 0.2}s`;
 });
 </script>
+<script src="/reviews.js" defer></script>
 </body>
 </html>
