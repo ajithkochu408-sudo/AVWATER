@@ -6,7 +6,7 @@
 
 <title>Water Delivery Trivandrum | A&V Marketing Agency</title>
 
-<meta name="description" content="Fast and reliable water delivery in Trivandrum. 20L water can delivery for homes, apartments, offices, hospitals and events. Call 8606322237.">
+<meta name="description" content="Fast and reliable water delivery in Trivandrum. 20L water can delivery for homes, apartments, offices, hospitals and events. 1L, 500ml and 300ml bottles also available. Call 8606322237.">
 
 <meta name="keywords" content="water delivery Trivandrum, 20L water can delivery Trivandrum, drinking water supply Trivandrum, water can delivery near me, Kazhakkoottam water delivery, Technopark water supply">
 
@@ -66,19 +66,44 @@ footer a{color:white;text-decoration:none;margin:8px;display:inline-block}
 header{text-align:center;justify-content:center;gap:12px}
 }
 </style>
+<!-- GOOGLE ADS TRACKING -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18202558704"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18202558704');
+function gtag_report_conversion(url) {
+  var done = false;
+  var callback = function () {
+    if (done) return; done = true;
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18202558704/ThB1CPLywrwcEPCB1OdD',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  setTimeout(callback, 1000); // open the call even if Google tracking is blocked
+  return false;
+}
+</script>
 </head>
 
 <body>
 
 <header>
   <div class="logo">💧 A&V Marketing Agency <span>Pure Water Delivery</span></div>
-  <a class="header-btn" href="tel:8606322237">📞 Call Now</a>
+  <a class="header-btn" href="tel:8606322237" onclick="return gtag_report_conversion('tel:8606322237');">📞 Call Now</a>
 </header>
 
 <section class="hero">
   <h1>Water Delivery in Trivandrum</h1>
   <p>Pure and safe drinking water delivery for homes, apartments, offices, hospitals, schools and events across Trivandrum.</p>
-  <a class="btn call" href="tel:8606322237">📞 Call: 8606322237</a>
+  <a class="btn call" href="tel:8606322237" onclick="return gtag_report_conversion('tel:8606322237');">📞 Call: 8606322237</a>
   <a class="btn wa" href="https://wa.me/918606322237?text=Hi%20A%26V!%20I%20want%20water%20delivery%20in%20Trivandrum." target="_blank">💬 WhatsApp Order</a>
 </section>
 
@@ -161,6 +186,11 @@ header{text-align:center;justify-content:center;gap:12px}
       <h3>Which areas do you cover?</h3>
       <p>We cover Kazhakkoottam, Technopark, Sreekaryam, Pattom, Kowdiar, Ulloor and nearby Trivandrum areas.</p>
     </div>
+
+    <div class="faq-item">
+      <h3>What sizes do you supply?</h3>
+      <p>We supply 20 litre water cans, 1 litre bottles, 500ml bottles and 300ml bottles across Trivandrum.</p>
+    </div>
   </div>
 </section>
 
@@ -168,7 +198,7 @@ header{text-align:center;justify-content:center;gap:12px}
   <div class="container">
     <h2>Order Water Delivery Today</h2>
     <p>Call or WhatsApp now for drinking water delivery in Trivandrum.</p>
-    <a class="btn call" href="tel:8606322237">📞 Call: 8606322237</a>
+    <a class="btn call" href="tel:8606322237" onclick="return gtag_report_conversion('tel:8606322237');">📞 Call: 8606322237</a>
     <a class="btn wa" href="https://wa.me/918606322237?text=Hi%20A%26V!%20I%20want%20water%20delivery%20in%20Trivandrum." target="_blank">💬 WhatsApp Order</a>
   </div>
 </section>
@@ -191,7 +221,7 @@ header{text-align:center;justify-content:center;gap:12px}
 
 <div class="float">
   <a class="wa-f" href="https://wa.me/918606322237?text=Hi%20A%26V!%20I%20want%20water%20delivery%20in%20Trivandrum." target="_blank">💬</a>
-  <a class="call-f" href="tel:8606322237">📞</a>
+  <a class="call-f" href="tel:8606322237" onclick="return gtag_report_conversion('tel:8606322237');">📞</a>
 </div>
 
 </body>
